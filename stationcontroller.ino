@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include "ardusss7.h"
+#include <Keypad.h>
 
 #define STATIONID 2
 
@@ -32,6 +33,18 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  
+  switch(sendStatus) {
+    case idle:
+      break;
+    case isQueued:
+      // Benutzer hat ein Ziel ausgewählt
+      break;
+    case ReadyForSend:
+      // Nutzer kann Kapsel einwerfen
+      break;
+    case AbortSending:
+      break;
+    case WaitingForSendFinished:
+      break;
+  }
 }
