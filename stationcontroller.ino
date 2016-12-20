@@ -1,3 +1,8 @@
+#define STATIONID 2
+
+const String[11] stationNames = {"GateToGo1", "GateToGo2", "Sendezentrum", "GF2", "Aufzug", "WelcomeWizzards1", "WelcomeWizzards2", "WorkOut", "Section9", "DesertDruide", "FoodHackingBase"};
+const byte[11] stationIds = [3, 4, 6, 7, 8, 12, 13, 14, 15, 16, 17];
+
 enum sendStatus {
   idle,
   isQueued,
