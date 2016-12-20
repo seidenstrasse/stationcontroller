@@ -1,3 +1,6 @@
+#include <Arduino.h>
+#include "ardusss7.h"
+
 #define STATIONID 2
 
 const String[11] stationNames = {"GateToGo1", "GateToGo2", "Sendezentrum", "GF2", "Aufzug", "WelcomeWizzards1", "WelcomeWizzards2", "WorkOut", "Section9", "DesertDruide", "FoodHackingBase"};
@@ -22,11 +25,13 @@ recieveStatus recieveStatus = idle;
 
 
 void setup() {
-  // put your setup code here, to run once:
+  Serial.begin(9600);
+  SSS7.init();
 
+  Serial.print("Silkroad Station " + STATIONID + " has booted");
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-
+  
 }
